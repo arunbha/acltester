@@ -39,7 +39,7 @@ config = [
 class ACLTester:
     def __init__(self):
         mytime = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-        self.path = os.path.expanduser("~/Desktop/ACLTester-") + " + mytime + ".log"
+        self.path = os.path.expanduser("~/ACLTester-") + " + mytime + ".log"
         self.fp = open(self.path, 'ab')
         print "Starting Tests"
         self.runTests()
@@ -49,22 +49,6 @@ class ACLTester:
     def runTests(self):
         self.runACLTests()
         self.fp.close()
-
-    def getiCloudInfo(self):
-        try:
-            icloudID = self.fetchiCloudAccount()
-            print " Gathering iCloud Info"
-            print " Logged in iCloud ID : %s" % icloudID
-            print >> self.fp, "Logged in iCloud ID : %s" % icloudID
-        except:
-            print ""
-
-    def startBonjourServer(self,threadName,  command, timeout):
-        print "Received :%s" % command
-        process = subprocess.Popen(command.split())
-        process.communicate()
-        time.sleep(timeout)
-        process.terminate()
 
     def cidrACLTest(self,incidr, type, port):
         # Get address string and CIDR string
