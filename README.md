@@ -4,7 +4,7 @@ A python script to check ACL connectivity to various hosts from a MAC or Linux M
 
 ## How to Run this
 
- - Copy the file to your MAC or Linux Machines
+ - Copy the file to your MAC or Linux Machines ( Windows not supported)
  - Give execute permissions (chmod +x ACLTester.py
  - Run the script - ./ACLTester.py
  - The script will print some details to the console and an output file will also be genrated in the users Home Directory
