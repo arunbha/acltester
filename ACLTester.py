@@ -39,7 +39,7 @@ config = [
 class ACLTester:
     def __init__(self):
         mytime = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-        self.path = os.path.expanduser("~/ACLTester-") + " + mytime + ".log"
+        self.path = os.path.expanduser("~/ACLTester-") + mytime + ".log"
         self.fp = open(self.path, 'ab')
         print "Starting Tests"
         self.runTests()
